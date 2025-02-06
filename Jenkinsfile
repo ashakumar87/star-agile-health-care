@@ -26,7 +26,7 @@ pipeline {
     stage('Create Docker Image') {
       steps {
         echo 'This satge will create a docker image'
-        sh 'docker build -t ashakumar893/Healthcare:1.0 .'
+        sh 'docker build -t ashakumar893/healthcare:1.0 .'
                           }
             }
      stage('Login into dockerhub') {
@@ -40,7 +40,7 @@ pipeline {
      stage('Docker Push-Image') {
       steps {
         echo 'This stage will push my new image to the dockerhub'
-        sh 'docker push ashakumar893/Healthcare:1.0'
+        sh 'docker push ashakumar893/healthcare:1.0'
             }
       }
    }
