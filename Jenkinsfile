@@ -33,7 +33,7 @@ pipeline {
       steps {
         echo 'This satge will loginto docker hub'
         withCredentials([usernamePassword(credentialsId: 'Dockerlogin', passwordVariable: 'docker-pass', usernameVariable: 'docker-login')]) {
-        sh 'docker login -u ${Dockerlogin} -p ${docker-pass}'
+        sh 'docker login -u ${docker-login} -p ${docker-pass}'
             }
       } 
      }
